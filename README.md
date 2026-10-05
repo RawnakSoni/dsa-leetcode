@@ -18,6 +18,6 @@ Arrays · Strings · Hashing · Two Pointers · Sliding Window · Stack · Linke
 
 ### 📈 Progress
 
-Problems will be added daily, organized by **LeetCode problem number and topic**.
+Problems will be added daily, organized by **LeetCode problem number and topic**
 
 > **Solve → Understand → Optimize → Repeat**
