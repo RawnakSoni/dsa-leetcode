@@ -10,7 +10,6 @@ majorityElement = function (list) {
         } else {
             count--
         }
-        console.log('-count->', count)
     }
     return candidate
 }
