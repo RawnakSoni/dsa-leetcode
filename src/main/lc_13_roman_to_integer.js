@@ -20,5 +20,6 @@ romanToInteger = function (roman) {
     return res
 }
 
-const roman = 'LVIII'
-console.log(romanToInteger(roman))
+console.log(romanToInteger('X'))
+console.log(romanToInteger('II'))
+console.log(romanToInteger('MMXXVI'))
