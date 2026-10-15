@@ -10,5 +10,5 @@ sumCounts = function (nums) {
     return res
 }
 
-const list = [1, 2, 1]
+const list = [1, 2, 1, 3]
 console.log(sumCounts(list))
