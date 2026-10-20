@@ -1,6 +1,6 @@
 # Daily DSA Prep 🚀
 
-Daily practice of **Data Structures & Algorithms** using **LeetCode**.
+Daily practice of **Data Structures & Algorithms** using **LeetCode**
 
 ### 🎯 Goals
 - Solve DSA problems consistently
