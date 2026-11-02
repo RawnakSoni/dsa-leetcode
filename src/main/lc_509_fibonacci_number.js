@@ -8,5 +8,5 @@ fib = function (n) {
     return (fib(n - 2) + fib(n - 1))
 }
 
-const n = 4
+const n = 7
 console.log(fib(n))

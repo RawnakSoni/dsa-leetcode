@@ -15,5 +15,5 @@ findMaxAverage = function (nums, k) {
     return maxSum / k
 }
 
-const nums = [1, 12, -5, -6, 50, 3], k = 4
+const nums = [1, 12, -4, -6, 50, 3], k = 4
 console.log(findMaxAverage(nums, k))

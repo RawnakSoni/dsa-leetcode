@@ -15,5 +15,5 @@ isValidParentheses = function (str) {
     return stack.length == 0
 }
 
-const str = '[{()(}]'
+const str = '[{()()}]'
 console.log(isValidParentheses(str)) 
