@@ -5,7 +5,7 @@ class ListNode {
     }
 }
 
-var swapNodes = function (head) {
+swapNodes = function (head) {
     const dummy = new ListNode(0)
     dummy.next = head
 
