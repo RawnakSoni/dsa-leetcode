@@ -1,4 +1,3 @@
-
 sumCounts = function (nums) {
     const MOD = 1_000_000_007
     const n = nums.length
