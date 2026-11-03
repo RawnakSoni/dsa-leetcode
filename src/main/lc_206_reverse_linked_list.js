@@ -5,7 +5,7 @@ class ListNode {
     }
 }
 
-var reverseList = function (head) {
+reverseList = function (head) {
     let prev = null
     let curr = head
     while (curr !== null) {
