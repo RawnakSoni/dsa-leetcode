@@ -1,7 +1,9 @@
-function TreeNode(val, left = null, right = null) {
-    this.val = val
-    this.left = left
-    this.right = right
+class TreeNode {
+    constructor(val, left = null, right = null) {
+        this.val = val
+        this.left = left
+        this.right = right
+    }
 }
 
 preorderTraversal = function (root) {
