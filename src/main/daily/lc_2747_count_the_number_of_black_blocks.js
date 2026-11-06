@@ -4,7 +4,6 @@ countServers = function (n, logs, x, queries) {
         .map((q, i) => [q, i])
         .sort((a, b) => a[0] - b[0])
     let freq = new Map()
-
     let left = 0
     let right = 0
     let active = 0
@@ -24,7 +23,6 @@ countServers = function (n, logs, x, queries) {
             }
             right++
         }
-
 
         while (
             left < right &&
