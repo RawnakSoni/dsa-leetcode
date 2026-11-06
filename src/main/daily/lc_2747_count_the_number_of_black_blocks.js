@@ -1,33 +1,47 @@
-countBlackBlocks = function (m, n, coordinates) {
-    let map = new Map()
-    for (let [r, c] of coordinates) {
+countServers = function (n, logs, x, queries) {
+    logs.sort((a, b) => a[1] - b[1])
+    let sortedQueries = queries
+        .map((q, i) => [q, i])
+        .sort((a, b) => a[0] - b[0])
+    let freq = new Map()
 
-        let blocks = [
-            [r - 1, c - 1],
-            [r - 1, c],
-            [r, c - 1],
-            [r, c]
-        ]
+    let left = 0
+    let right = 0
+    let active = 0
+    let result = new Array(queries.length)
 
-        for (let [x, y] of blocks) {
-            if (x >= 0 && y >= 0 &&
-                x < m - 1 && y < n - 1) {
-                let key = `${x},${y}`
-                map.set(key, (map.get(key) || 0) + 1)
+    for (let [q, idx] of sortedQueries) {
+
+        while (
+            right < logs.length &&
+            logs[right][1] <= q
+        ) {
+            let server = logs[right][0]
+            freq.set(server, (freq.get(server) || 0) + 1)
+
+            if (freq.get(server) === 1) {
+                active++
             }
+            right++
         }
+
+
+        while (
+            left < right &&
+            logs[left][1] < q - x
+        ) {
+            let server = logs[left][0]
+            freq.set(server, freq.get(server) - 1)
+
+            if (freq.get(server) === 0) {
+                active--
+            }
+            left++
+        }
+        result[idx] = n - active
     }
-
-    let total = (m - 1) * (n - 1)
-    let result = [0, 0, 0, 0, 0]
-
-    for (let count of map.values()) {
-        result[count]++
-    }
-
-    result[0] = total - map.size
     return result
 }
 
-const m = 3, n = 3, coordinates = [[0, 0]]
-console.log(countBlackBlocks(m, n, coordinates))
+const n = 3, logs = [[1, 3], [2, 6], [1, 5]], x = 5, queries = [10, 11]
+console.log(countServers(n, logs, x, queries))
