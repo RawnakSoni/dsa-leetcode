@@ -18,7 +18,5 @@ minimumSumSubarray = function (nums, l, r) {
     return ans === Infinity ? -1 : ans
 }
 
-const nums = [3, -2, 1, 4]
-l = 2
-r = 3
+const nums = [3, -2, 1, 4], l = 2, r = 3
 console.log(minimumSumSubarray(nums, l, r))
