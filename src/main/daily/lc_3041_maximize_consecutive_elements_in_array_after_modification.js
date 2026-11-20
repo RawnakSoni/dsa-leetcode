@@ -1,6 +1,5 @@
 maxSelectedElements = function (nums) {
     nums.sort((a, b) => a - b)
-
     let dp = new Map()
     let res = 0
 
